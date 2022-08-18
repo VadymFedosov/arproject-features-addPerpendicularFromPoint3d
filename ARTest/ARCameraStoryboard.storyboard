@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xL5-52-PJf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="NRS-nr-Fza">
+            <objects>
+                <navigationController id="xL5-52-PJf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nLa-nq-zLh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iD7-w4-9ab" kind="relationship" relationship="rootViewController" id="ldj-lr-Neb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGp-l3-p6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="106"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="sBz-Dt-0bH">
+            <objects>
+                <viewController id="iD7-w4-9ab" customClass="ARCameraViewController" customModule="ARTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2V2-At-3vR" customClass="ARCameraView" customModule="ARTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ch-8t-kLU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdj-fr-b7s">
+                                <rect key="frame" x="186.5" y="805.5" width="41" height="41.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cdj-fr-b7s" secondAttribute="height" multiplier="1:1" id="9Os-aS-uFH"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="photoButtonAction:" destination="2V2-At-3vR" eventType="touchUpInside" id="twM-Kx-iqV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cdj-fr-b7s" firstAttribute="centerX" secondItem="0ch-8t-kLU" secondAttribute="centerX" id="9ja-iS-OIG"/>
+                            <constraint firstItem="3KW-M7-zCN" firstAttribute="trailing" secondItem="0ch-8t-kLU" secondAttribute="trailing" id="DU2-Go-yV9"/>
+                            <constraint firstItem="0ch-8t-kLU" firstAttribute="top" secondItem="3KW-M7-zCN" secondAttribute="top" id="Eyq-ba-3CH"/>
+                            <constraint firstItem="3KW-M7-zCN" firstAttribute="bottom" secondItem="0ch-8t-kLU" secondAttribute="bottom" id="Hta-jh-ftm"/>
+                            <constraint firstItem="3KW-M7-zCN" firstAttribute="bottom" secondItem="Cdj-fr-b7s" secondAttribute="bottom" constant="15" id="VFX-4O-A1e"/>
+                            <constraint firstItem="Cdj-fr-b7s" firstAttribute="width" secondItem="0ch-8t-kLU" secondAttribute="width" multiplier="0.1" id="tXE-9d-4UX"/>
+                            <constraint firstItem="0ch-8t-kLU" firstAttribute="leading" secondItem="3KW-M7-zCN" secondAttribute="leading" id="vWE-7N-28O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3KW-M7-zCN"/>
+                        <connections>
+                            <outlet property="sceneView" destination="0ch-8t-kLU" id="FF7-vP-fSg"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="xGG-6N-eJj"/>
+                    <connections>
+                        <outlet property="arView" destination="2V2-At-3vR" id="PCt-qi-VDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKa-Gv-mJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+    </resources>
+</document>

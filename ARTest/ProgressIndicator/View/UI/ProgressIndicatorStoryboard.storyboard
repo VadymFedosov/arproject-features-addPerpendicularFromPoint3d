@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ziv-oT-SQd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Progress Indicator View Controller-->
+        <scene sceneID="O44-P5-9jf">
+            <objects>
+                <viewController storyboardIdentifier="ProgressIndicatorStoryboard" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Ziv-oT-SQd" customClass="ProgressIndicatorViewController" customModule="ARTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1uF-iI-sp0" customClass="ProgressIndicatorView" customModule="ARTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-hF-dTo">
+                                <rect key="frame" x="182" y="428" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EAU-hF-dTo" secondAttribute="height" multiplier="1:1" id="RwQ-hZ-IXD"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EAU-hF-dTo" firstAttribute="width" secondItem="1uF-iI-sp0" secondAttribute="width" multiplier="0.12" id="HB5-ay-eyE"/>
+                            <constraint firstItem="EAU-hF-dTo" firstAttribute="centerY" secondItem="a6V-ir-Ndk" secondAttribute="centerY" id="Me7-c7-r6k"/>
+                            <constraint firstItem="EAU-hF-dTo" firstAttribute="centerX" secondItem="a6V-ir-Ndk" secondAttribute="centerX" id="OGD-CM-9PG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a6V-ir-Ndk"/>
+                        <connections>
+                            <outlet property="indicatorView" destination="EAU-hF-dTo" id="OJy-Bg-LSr"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="progressIndicatorView" destination="1uF-iI-sp0" id="HAh-u3-fOn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wln-SV-os4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157.97101449275362" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+</document>
